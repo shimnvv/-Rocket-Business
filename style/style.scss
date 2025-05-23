@@ -589,9 +589,39 @@ a {
 
 @media (min-width: 793px) and (max-width: 800px) {
   .video-container {
-    width: 90%;
+    width: 99%;
     height: fit-content;
   }
+
+  .product-cards-container {
+        display: grid;
+        grid-gap: 15px;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: auto auto;
+        max-width: 784px;
+        
+        .card-1 {
+          grid-column: 1;
+          grid-row: 1;
+        }
+
+        .product-column {
+            grid-column: 1 / -1;
+            grid-row: 2;
+            display: grid;
+            grid-gap: 15px;
+            grid-template-columns: repeat(2, 1fr);
+          }
+
+        .slider-container {
+          width: 387px;
+          grid-gap: 15px;
+          grid-column: 2 / -1;
+          grid-row: 1;
+        }
+      }
 }
 
 @media (min-width: 651px) and (max-width: 792px) {
